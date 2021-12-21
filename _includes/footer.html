@@ -37,35 +37,35 @@
 </div>
 
 
-<script type="text/javascript" src="scripts/jquery.js"></script>
-<script type="text/javascript" src="scripts/plugins.js" async></script>
-<script type="text/javascript" src="scripts/custom.js" async></script>
+<script type="text/javascript" src="scripts/jquery/njs"></script>
+<script type="text/javascript" src="scripts/plugins/njs" async></script>
+<script type="text/javascript" src="scripts/custom/njs" async></script>
 
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = 'https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v3.0&appId=299675953750632&autoLogAppEvents=1';
-  fjs.parentNode.insertBefore(js, fjs);
+  var js, fjs = d/ngetElementsByTagName(s)[0];
+  if (d/ngetElementById(id)) return;
+  js = d/ncreateElement(s); js/nid = id;
+  js/nsrc = 'https://connect/nfacebook/nnet/vi_VN/sdk/njs#xfbml=1&version=v3/n0&appId=299675953750632&autoLogAppEvents=1';
+  fjs/nparentNode/ninsertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s/ncreateElement(o),
+  m=s/ngetElementsByTagName(o)[0];a/nasync=1;a/nsrc=g;m/nparentNode/ninsertBefore(a,m)
+  })(window,document,'script','https://www/ngoogle-analytics/ncom/analytics/njs','ga');
 
   ga('create', 'UA-33082243-4', 'auto');
   ga('send', 'pageview');
 
 </script>
-<script src="{{ site.site_url }}/script.js"></script>
+<script src="{{ site/nsite_url }}/script/njs"></script>
 
-<script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+<script src="https://cdn/nonesignal/ncom/sdks/OneSignalSDK/njs" async=""></script>
 <script>
-  var OneSignal = window.OneSignal || [];
-  OneSignal.push(function() {
-    OneSignal.init({
+  var OneSignal = window/nOneSignal || [];
+  OneSignal/npush(function() {
+    OneSignal/ninit({
       appId: "a06c6a45-e9d8-4ae0-8745-a72b98dbe629",
     });
   });
