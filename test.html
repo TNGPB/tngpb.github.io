@@ -68,17 +68,9 @@
             <li class="breadcrumb-item text-sm"><a class="opacity-5 text-dark" href="javascript:;">Pages</a></li>
             <li class="breadcrumb-item text-sm text-dark active" aria-current="page">Default</li>
           </ol>
-          <h6 class="font-weight-bolder mb-0">Default</h6>
+          <h6 class="font-weight-bolder mb-0">Phần KCS</h6>
         </nav>
-        <div class="sidenav-toggler sidenav-toggler-inner d-xl-block d-none ">
-          <a href="javascript:;" class="nav-link p-0">
-            <div class="sidenav-toggler-inner">
-              <i class="sidenav-toggler-line bg-dark"></i>
-              <i class="sidenav-toggler-line bg-dark"></i>
-              <i class="sidenav-toggler-line bg-dark"></i>
-            </div>
-          </a>
-        </div>
+        
         <div class="collapse navbar-collapse mt-sm-0 mt-2 me-md-0 me-sm-4" id="navbar">
           <div class="ms-md-auto pe-md-3 d-flex align-items-center">
             <div class="input-group">
@@ -93,15 +85,7 @@
                 <span class="d-sm-inline d-none">Sign In</span>
               </a>
             </li>
-            <li class="nav-item d-xl-none ps-3 d-flex align-items-center">
-              <a href="javascript:;" class="nav-link p-0" id="iconNavbarSidenav">
-                <div class="sidenav-toggler-inner">
-                  <i class="sidenav-toggler-line bg-dark"></i>
-                  <i class="sidenav-toggler-line bg-dark"></i>
-                  <i class="sidenav-toggler-line bg-dark"></i>
-                </div>
-              </a>
-            </li>
+            
             <li class="nav-item px-3 d-flex align-items-center">
               <a href="javascript:;" class="nav-link p-0">
                 <i class="fa fa-cog fixed-plugin-button-nav cursor-pointer" aria-hidden="true"></i>
@@ -188,109 +172,63 @@
     <div class="container-fluid my-3 py-3">
       <div class="row">
         
-		<div class="col-md-6 mt-md-0 mt-4">
-          <div class="card">
+        <div class="col-md-12">
+            <div class="card">
             <div class="card-header p-3 pb-0">
               <h6 class="mb-1">
-                Password requirements
+                Lưu ý
               </h6>
               <p class="text-sm mb-0">
-                Please follow this guide for a strong password:
+                KCS Nhập <b><u>Số lượng đạt</u></b> và <b><u>nợ </u></b> theo ngày.
               </p>
             </div>
             <div class="card-body p-3">
               <ul class="text-muted ps-4 mb-0">
                 <li>
-                  <span class="text-sm">One special characters</span>
+                  <span class="text-sm">Nhập vào cuối ngày làm việc .</span>
                 </li>
                 <li>
-                  <span class="text-sm">Min 6 characters</span>
+                  <span class="text-sm">Chọn đúng ngày cần nhập .</span>
                 </li>
                 <li>
-                  <span class="text-sm">One number (2 are recommended)</span>
+                  <span class="text-sm">Báo đúng <b>số lượng kiểm đạt</b> , và <b> số hàng nợ</b> chưa kiểm</span>
                 </li>
-                <li>
-                  <span class="text-sm">Change it often</span>
-                </li>
+                
               </ul>
             </div>
           </div>
         </div>
-        <div class="col-md-6">
+        
+      </div>
+	     <div class="row">
+        <hr class="horizontal dark mt-1 mb-3">
+        <div class="col-md-12">
           <div class="card">
             <div class="card-header pb-0 p-3">
-              <h6 class="mb-0">Nhập báo cáo IN-LINE</h6>
+              <h6 class="mb-0">Nhập Số lượng kiểm đạt và nợ</h6>
             </div>
             <div class="card-body p-3">
               <label class="form-label">Ngày kiểm tra</label>
               <div class="form-group">
                 <input class="form-control" type="date" placeholder="Chọn ngày">
               </div>
-			  <label class="form-label">Chọn cụm cần nhập</label>
-          <select class="form-control" name="choices-questions" id="choices-questions">
-		   <option value="Your Question">Chọn cụm cần nhập</option>
-            <option value="Question 1">Cụm 1</option>
-            <option value="Question 2">Cụm 2</option>
-            <option value="Question 3">Cụm 3</option>          
-          </select>
+			  
               <label class="form-label">Mã hàng</label>
               <div class="form-group">
-                <input class="form-control" type="text" placeholder="Nhập tên mã hàng">
+                <input class="form-control" type="number" placeholder="Nhập tên mã hàng">
               </div>
-			  <label class="form-label">% Cụm 1</label>
+			  <label class="form-label">Số lượng đạt</label>
               <div class="form-group">
-                <input class="form-control" type="text" placeholder="Nhập % cụm 1">
+                <input class="form-control" type="number" placeholder="Nhập số lượng đạt">
               </div>
-			  <label class="form-label">% Cụm 2</label>
+			  <label class="form-label">Số lượng hàng nợ</label>
               <div class="form-group">
-                <input class="form-control" type="text" placeholder="Nhập % cụm 2">
+                <input class="form-control" type="number" placeholder="Nhập số hàng nợ">
               </div>
-			  <label class="form-label">% Cụm 3</label>
-              <div class="form-group">
-                <input class="form-control" type="text" placeholder="Nhập % cụm 3">
-              </div>
-			  <label class="form-label">Nhập nội dung lỗi</label>
-              <div class="form-group">
-                <textarea class="form-control" type="text" placeholder="Nhập nội dung lỗi" rows="5"></textarea>
-              </div>			   
-              
-              
               <div class="row mt-5">
                 <div class="col-lg-8 col-12 actions text-end ms-auto">
                   <button class="btn btn-outline-primary btn-sm mb-0" type="reset">Cancel</button>
                   <button class="btn bg-gradient-primary btn-sm mb-0" type="button">Save Changes</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 mt-md-0 mt-4">
-          <div class="card">
-            <div class="card-header p-3 pb-0">
-              <div class="d-flex align-items-center">
-                <h6 class="mb-0">
-                  Two factor authentication
-                </h6>
-                <button class="btn btn-sm bg-gradient-dark ms-auto mb-0">
-                  Enable
-                </button>
-              </div>
-            </div>
-            <div class="card-body p-3">
-              <p class="text-muted text-sm mb-4 mt-sm-5 mt-3">
-                Two-factor authentication adds an additional
-                layer of security to your account by requiring more
-                than just a password to log in.
-              </p>
-              <div class="card">
-                <div class="card-body border-radius-lg bg-gradient-dark p-3">
-                  <h6 class="mb-0 text-white">
-                    Liên hệ
-                  </h6>
-                  <p class="text-white text-sm mb-4">
-                    Mọi quá trình sử dụng hoặc thắc mắc vui lòng liên hệ !
-                  </p>
-                  <a class="btn bg-gradient-light mb-0" href="https://zalo.me/0968162750">Liên hệ</a>
                 </div>
               </div>
             </div>
@@ -329,7 +267,38 @@
             </div>
           </div>
         </div>
-        
+        <div class="col-md-6 mt-md-0 mt-4">
+        <div class="card">
+            <div class="card-header p-3 pb-0">
+              <div class="d-flex align-items-center">
+                <h6 class="mb-0">
+                  Two factor authentication
+                </h6>
+                <button class="btn btn-sm bg-gradient-dark ms-auto mb-0">
+                  Enable
+                </button>
+              </div>
+            </div>
+            <div class="card-body p-3">
+              <p class="text-muted text-sm mb-4 mt-sm-5 mt-3">
+                Two-factor authentication adds an additional
+                layer of security to your account by requiring more
+                than just a password to log in.
+              </p>
+              <div class="card">
+                <div class="card-body border-radius-lg bg-gradient-dark p-3">
+                  <h6 class="mb-0 text-white">
+                    Liên hệ
+                  </h6>
+                  <p class="text-white text-sm mb-4">
+                    Mọi quá trình sử dụng hoặc thắc mắc vui lòng liên hệ !
+                  </p>
+                  <a class="btn bg-gradient-light mb-0" href="https://zalo.me/0968162750">Liên hệ</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
       
     </div>
