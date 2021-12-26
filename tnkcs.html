@@ -134,9 +134,15 @@
         form.addEventListener('submit', e => {
             e.preventDefault()
             fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-            .then(response => $("#form_alerts").html("<div class='alert alert-success text-white'><div class='d-flex align-items-center'> Đã cập nhật<a class='btn bg-gradient-info mt-2 me-2' href='../tnkcs.html'>XONG</a></div></div>"))
+            .then(response => $("#form_alerts").html("<div class='alert alert-success text-white'> Đã cập nhật</div>"))
             .catch(error => $("#form_alerts").html("<div class='alert alert-danger alert-dismissible text-white'>Lỗi cập nhật vui lòng liên hệ Mr. Chiến.</div>"))
-        })
+        setTimeout(function() {
+    $('#form_alerts').fadeOut('fast');
+}, 6000); // <-- time in milliseconds
+		})
+		function delayer(){
+    window.location = "/"
+}
     </script>
 </body>
 </html>

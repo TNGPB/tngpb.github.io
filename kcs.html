@@ -167,8 +167,8 @@
         form.addEventListener('submit', e => {
             e.preventDefault()
             fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-            .then(response => $("#form_alerts").html("<div class='alert alert-success alert-dismissible text-white'>Đã cập nhật hệ thống.</div>"))
-            .catch(error => $("#form_alerts").html("<div class='alert alert-danger alert-dismissible text-white'>Lỗi cập nhật vui lòng liên hệ Mr. Chiến.</div>"))
+            .then(response => $("#form_alerts").html("<div class='alert alert-success text-white'><b>Đã cập nhật hệ thống!</b></div>"))
+            .catch(error => $("#form_alerts").html("<div class='alert alert-danger text-white'>Lỗi cập nhật vui lòng liên hệ Mr. Chiến.</div>"))
         })
     </script>
 </body>
