@@ -133,7 +133,7 @@
                     </div>
                     <div>
                         <button class="btn bg-gradient-primary btn-sm mb-0" type="submit">Cập nhật</button>
-                        <button class="btn btn-outline-primary btn-sm mb-0" type="reset">Huỷ</button>
+                        <button class="btn btn-outline-primary btn-sm mb-0"  onclick="tai_lai_trang()"">Huỷ</button>
                     </div>
                 </form>
 				</div>
@@ -170,6 +170,11 @@
             .then(response => $("#form_alerts").html("<div class='alert alert-success text-white'><b>Đã cập nhật hệ thống!</b></div>"))
             .catch(error => $("#form_alerts").html("<div class='alert alert-danger text-white'>Lỗi cập nhật vui lòng liên hệ Mr. Chiến.</div>"))
         })
+    </script>
+	<script>
+        function tai_lai_trang(){
+            location.reload();
+        }
     </script>
 </body>
 </html>
