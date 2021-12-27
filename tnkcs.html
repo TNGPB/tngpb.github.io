@@ -97,7 +97,7 @@
 					<div class="form-group mb-3">
                         <label for="name" class="form-label">Kiểm tra chỉ</label>                      
 						<select type="number" id="name" name="Chỉ" class="form-control" placeholder="Kiểm tra chỉ" required>
-		  <option value="0">Lựa chọn kết quả</option>
+		  <option >Lựa chọn kết quả</option>
             <option value="Đạt">Đạt</option>
             <option value="Không đạt">Không đạt</option>
                          		
@@ -146,9 +146,7 @@
             fetch(scriptURL, { method: 'POST', body: new FormData(form)})
             .then(response => $("#form_alerts").html("<div class='alert alert-success text-white'> <b>Đã cập nhật</b></div>"))
             .catch(error => $("#form_alerts").html("<div class='alert alert-danger alert-dismissible text-white'>Lỗi cập nhật vui lòng liên hệ Mr. Chiến.</div>"))
-        setTimeout(function() {
-    $('#form_alerts').fadeOut('fast');
-}, 6000); // <-- time in milliseconds
+        
 		})
 		
     </script>
