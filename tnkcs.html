@@ -134,15 +134,13 @@
         form.addEventListener('submit', e => {
             e.preventDefault()
             fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-            .then(response => $("#form_alerts").html("<div class='alert alert-success text-white'> Đã cập nhật</div>"))
+            .then(response => $("#form_alerts").html("<div class='alert alert-success text-white'> <b>Đã cập nhật</b></div>"))
             .catch(error => $("#form_alerts").html("<div class='alert alert-danger alert-dismissible text-white'>Lỗi cập nhật vui lòng liên hệ Mr. Chiến.</div>"))
         setTimeout(function() {
     $('#form_alerts').fadeOut('fast');
 }, 6000); // <-- time in milliseconds
 		})
-		function delayer(){
-    window.location = "/"
-}
+		
     </script>
 	<script>
         function tai_lai_trang(){
