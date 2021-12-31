@@ -129,7 +129,13 @@
                     </div>
 					 <div class="col-lg-3 col-md-6 col-6">
                         <label for="message" class="form-label">Mã hàng</label>
-                        <input type="number" id="email" name="Mã hàng" class="form-control" placeholder="Nhập tên mã hàng" required>
+                        <select type="text" id="name" name="Mã hàng" class="form-control"  required>
+		    <option >Chọn Mã hàng</option>
+            <option value="303654">303654</option>
+            <option value="308205">308205</option>
+            <option value="310046">310046</option>
+            <option value="322661">322661</option>			
+          </select>
                     </div></div>
 					 <div class="row">
 					 <div class="col-lg-3 col-md-6 col-6">
@@ -138,7 +144,17 @@
                     </div>
 					 <div class="col-lg-3 col-md-6 col-6">
                         <label for="message" class="form-label">Cỡ</label>
-                        <input type="text" id="email" name="cỡ" class="form-control" placeholder="Cỡ sản xuất" required>
+                       <select type="number" id="name" name="cỡ" class="form-control" placeholder="chọn mùa sản xuất" required>
+		    <option >Chọn cỡ sản xuất</option>
+			<option value="2XS">2XS</option>
+            <option value="XS">XS</option>
+            <option value="S">S</option>
+            <option value="M">M</option>
+            <option value="L">L</option>
+            <option value="XL">XL</option>
+            <option value="2XL">2XL</option>  
+            <option value="3XL">2XL</option>    			
+          </select>
                     </div></div>
 					 <div class="row">
 					 <div class="col-lg-3 col-md-6 col-6">
@@ -160,8 +176,16 @@
                     </div> 
                    <div class="form-group mb-3">
                         <label for="message" class="form-label">Công đoạn cộp</label>
-						<textarea type="text" id="email" name="công đoạn" rows="3" class="form-control" placeholder="Tên công đoạn cộp" required"></textarea>
-                        
+						
+                     <select type="number" id="name" name="công đoạn" class="form-control" placeholder="chọn mùa sản xuất" required>
+		  <option >Chi tiết kiểm tra</option>
+            <option value="Cộp thân trước trái">Thân trước trái</option>
+            <option value="Cộp thân trước phải">Thân trước phải</option>
+            <option value="Cộp thân sau trái">Thân sau trái</option>
+            <option value="Cộp thân sau phải">Thân sau phải</option>
+            <option value="Cộp thân sườn phải">Thân sườn phải</option>
+            <option value="Cộp cạp">Cộp cạp</option>			
+          </select>   
                     </div>
 					<div class="row">
 					 <div class="col-lg-3 col-md-6 col-6">
@@ -176,7 +200,7 @@
 					<div class="row">
 					 <div class="col-lg-3 col-md-6 col-6">
                         <label for="message" class="form-label">Nhiệt độ giữa</label>
-                        <input type="text" id="email" name="nhiệt giữa" class="form-control" placeholder="Nhập nhiệt độ tâm"required>
+                        <input type="number" id="email" name="nhiệt giữa" class="form-control" placeholder="Nhập nhiệt độ tâm"required>
                     </div>
 					 <div class="col-lg-3 col-md-6 col-6">
                         <label for="message" class="form-label">Nhiệt bên phải</label>
@@ -186,11 +210,25 @@
 					<div class="row">
 					 <div class="col-lg-3 col-md-6 col-6">
                         <label for="message" class="form-label">Thời gian ép cài đặt</label>
-                        <input type="text" id="email" name="thời gian y/c" class="form-control" placeholder="Thời gian y/c" required>
+						<select type="number" id="name" name="thời gian y/c" class="form-control" placeholder="chọn mùa sản xuất" required>
+		  <option value="0">chọn thời gian ép</option>
+            <option value="12 s">12 giây</option>
+            <option value="14 s">14 giây</option>
+			<option value="15 s">15 giây</option>
+            <option value="16 s">16 giây</option>
+            <option value="18 s">18 giây</option> 			
+          </select>
                     </div>
 					 <div class="col-lg-3 col-md-6 col-6">
                         <label for="message" class="form-label">Thời gian ép TT</label>
-                        <input type="text" id="email" name="t/g thực tế" class="form-control" placeholder="Thời gian TT" required>
+						<select type="number" id="name" name="t/g thực tế" class="form-control" placeholder="chọn mùa sản xuất" required>
+		  <option >chọn thời gian ép</option>
+            <option value="12 s">12 giây</option>
+            <option value="14 s">14 giây</option>
+			<option value="15 s">15 giây</option>
+            <option value="16 s">16 giây</option>
+            <option value="18 s">18 giây</option> 			
+          </select>
                     </div>
 					</div>
 					<div class="row">
@@ -204,7 +242,7 @@
                     </div>
 					 <div class="col-lg-3 col-md-6 col-6">
                         <label for="message" class="form-label">Lực ép TT</label>
-                        <input type="text" id="email" name="lực ép t/t" class="form-control" placeholder="Nhập lực ép thực tế" required>
+                        <input type="number" id="email" name="lực ép t/t" class="form-control" placeholder="Nhập lực ép thực tế" required>
                     </div>
 					</div>
                     <div class="form-group mb-3">
@@ -216,7 +254,7 @@
 						<select type="number" id="name" name="kết quả" class="form-control" placeholder="Lựa chọn kết quả kiểm tra" required>
 		  <option >Lựa chọn kết quả</option>
             <option value="Đã kiểm tra nhiệt độ máy đạt">Đạt</option>
-            <option value="y/c cơ điện điều chỉnh sửa máy ">Không đạt</option>
+            <option value="Y/c cơ điện điều chỉnh sửa máy / kỹ thuật chuyền kiểm tra lại">Nhiệt độ Không đạt</option>
                          		
           </select>
                     </div> 
