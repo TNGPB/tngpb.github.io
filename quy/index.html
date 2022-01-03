@@ -80,7 +80,7 @@ Sao kê quỹ phòng
                     </div>
 					<div class="form-group mb-3">
                         <label for="message" class="form-label">Số tiền</label>
-                        <input type="number" id="email" name="Tiền" class="form-control" placeholder="Nhập phần trăm lỗi cụm" required>
+                        <input type="number" id="test" onkeyup="test();" name="Tiền" class="form-control" placeholder="Nhập phần trăm lỗi cụm" required>
                     </div>
 					<div class="form-group mb-3">
                         <label for="message" class="form-label">Nội dung</label>
@@ -142,5 +142,15 @@ Sao kê quỹ phòng
             location.reload();
         }
     </script>
+	<script>
+    function addCommas(str){
+        return str.replace(/^0+/, '').replace(/\D/g, "").replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+ 
+    function test(){
+        var val = document.getElementById('test').value;
+        document.getElementById('test').value = addCommas(val);
+    }
+</script>
 </body>
 </html>
