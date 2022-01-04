@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="apple-touch-icon" sizes="76x76" href="../../../assets/img/apple-icon.png">
+  <link rel="icon" type="image/png" href="../../../assets/img/favicon.png">
+  <title>
+   Kiểm tra Định vị
+  </title>
+  <!--     Fonts and icons     -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" /> 
+  <!-- Font Awesome Icons -->
+  <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
+  <!-- CSS Files -->
+  <link id="pagestyle" href="https://tngpb.github.io/style/soft-ui-dashboard.min.css" rel="stylesheet" />
+</head>
+<body class="g-sidenav-show bg-gray-100">
+<nav class="navbar navbar-main navbar-expand-lg position-sticky mt-4 top-1 px-0 mx-4 border-radius-xl z-index-sticky blur shadow-blur left-auto" id="navbarBlur" data-scroll="true">
+      <div class="container-fluid py-1 px-3">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb bg-transparent mb-0 pb-0 pt-1 px-0 me-sm-6 me-5">
+            <li class="breadcrumb-item text-sm">
+              <a class="opacity-3 text-dark" href="/">
+               <i class="fa fa-home me-sm-1" width="40px" height="40px" aria-hidden="true"></i>
+              </a>
+            </li>
+            
+            <li class="breadcrumb-item text-sm text-dark active" aria-current="page"><a class="opacity-3 text-dark" href="../cop-nhiet">Cộp nhiệt</a></li>
+          </ol>
+          <h6 class="font-weight-bolder mb-0">Nhập báo cáo kiểm tra máy định vị</h6>
+        </nav>
+        <div class="sidenav-toggler sidenav-toggler-inner d-xl-block d-none ">
+          
+        </div>
+        <div class="collapse navbar-collapse mt-sm-0 mt-2 me-md-0 me-sm-4" id="navbar">
+          <div class="ms-md-auto pe-md-3 d-flex align-items-center">
+            <div class="input-group">
+              <span class="input-group-text text-body"><i class="fas fa-search" aria-hidden="true"></i></span>
+              <input type="text" class="form-control" placeholder="Type here..." onfocus="focused(this)" onfocusout="defocused(this)">
+            </div>
+          </div>
+          <ul class="navbar-nav  justify-content-end">
+            <li class="nav-item d-flex align-items-center">
+              
+                <i class="fa fa-user me-sm-1" aria-hidden="true"></i>
+                <span class="d-sm-inline d-none">Sign In</span>
+              
+            </li>
+            <li class="nav-item d-xl-none ps-3 d-flex align-items-center">
+              <a href="javascript:;" class="nav-link p-0" id="iconNavbarSidenav">
+                <div class="sidenav-toggler-inner">
+                  <i class="sidenav-toggler-line bg-dark"></i>
+                  <i class="sidenav-toggler-line bg-dark"></i>
+                  <i class="sidenav-toggler-line bg-dark"></i>
+                </div>
+              </a>
+            </li>
+            <li class="nav-item px-3 d-flex align-items-center">
+              <a href="javascript:;" class="nav-link p-0">
+                <i class="fa fa-cog fixed-plugin-button-nav cursor-pointer" aria-hidden="true"></i>
+              </a>
+            </li>
+            <li class="nav-item dropdown pe-2 d-flex align-items-center">
+              <a href="javascript:;" class="nav-link p-0" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="fa fa-bell cursor-pointer" aria-hidden="true"></i>
+              </a>
+             
+            </li>
+          </ul>
+        </div>
+      </div>
+ </nav>
+ <main class="main-content max-height-vh-100 h-100">   
+ <div class="container-fluid my-3 py-3">
+  <div class="row">        
+        <div class="col-md-12">		
+            <div class="card">
+            <div class="card-header p-3 pb-0">
+              <h6 class="mb-1">
+                Lưu ý
+              </h6>
+              <p class="text-sm mb-0">
+                Chọn đúng ngày , tổ , máy, mã hàng cần nhập.
+              </p>
+            </div>
+           
+			<hr class="horizontal dark mt-1 mb-3">
+			<div class="card p-3">
+              <div class="d-flex align-items-center">
+                <h6 class="mb-0">
+                  Khi gặp sự cố !
+                </h6>				
+                <a class="btn btn-sm bg-gradient-dark ms-auto mb-0" href="https://zalo.me/0968162750">Liên hệ</a>
+              </div>
+            </div>
+          </div>		 
+        </div>       
+      </div>
+	  <hr class="horizontal dark mt-1 mb-3">
+    <div class="row">        
+        <div class="col-md-12">	
+            <div class="card">
+			<div class="card-header pb-0 p-3">
+              <h6 class="mb-0">Nhập báo cáo kiểm tra Định vị</h6>
+            </div>
+			 <div class="card-body p-3">               
+                <form name="google-sheet">
+                    <div id="form_alerts"></div>
+                    <div class="form-group mb-3">
+                        <label for="name" class="form-label">Ngày kiểm tra</label>
+                        <input type="date" id="name" name="Ngày" class="form-control" placeholder="Chọn ngày nhập" required>
+                    </div>
+					<div class="form-group mb-3">
+                        <label for="name" class="form-label">Chọn máy kiểm tra</label>                      
+						<select type="text" id="name" name="Máy" class="form-control" placeholder="máy" required>
+		  <option value="0">Chọn máy kiểm tra</option>
+            <option value="H&H máy 27">H&H MÁY 27</option>
+            <option value="H&H máy 28">H&H MÁY 28</option>
+            <option value="SVT máy 29">STV MÁY 29</option>
+            <option value="STV máy 30">STV MÁY 30 </option>			
+          </select>
+                    </div> 
+					<div class="row">
+					 <div class="col-lg-3 col-md-6 col-6">
+                        <label for="email" class="form-label">Thời gian kiểm tra</label>
+                        <input type="text" id="email" name="thời gian" class="form-control" placeholder="Thời gian kiểm tra" required>
+                    </div>
+					 <div class="col-lg-3 col-md-6 col-6">
+                        <label for="message" class="form-label">Mã hàng</label>
+                        <select type="text" id="name" name="Mã hàng" class="form-control"  required>
+		    <option >Chọn Mã hàng</option>
+            <option value="303654">303654</option>
+            <option value="308205">308205</option>
+            <option value="310046">310046</option>
+            <option value="322661">322661</option>			
+          </select>
+                    </div></div>
+					 <div class="row">
+					 <div class="col-lg-3 col-md-6 col-6">
+                        <label for="message" class="form-label">Số PO</label>
+                        <input type="text" id="email" name="số po" class="form-control" value="Đ - " required>
+                    </div>
+					 <div class="col-lg-3 col-md-6 col-6">
+                        <label for="message" class="form-label">Cỡ</label>
+                       <select type="number" id="name" name="cỡ" class="form-control" placeholder="chọn mùa sản xuất" required>
+		    <optgroup label="XS-2XL">
+			<option value="2XS">2XS</option>
+            <option value="XS">XS</option>
+            <option value="S">S</option>
+            <option value="M">M</option>
+            <option value="L">L</option>
+            <option value="XL">XL</option>
+            <option value="2XL">2XL</option>  
+            <option value="3XL">3XL</option> 
+            <optgroup label="5-6 -> 14-15">
+            <option value="5-6">5-6</option>
+            <option value="7-8">7-8</option>
+            <option value="8-9">8-9</option>
+            <option value="10-11">10-11</option>
+            <option value="12-13">12-13</option>
+            <option value="14-15">14-15</option>  
+           		
+          </select>
+                    </div></div>
+					 <div class="row">
+					 <div class="col-lg-3 col-md-6 col-6">
+                        <label for="message" class="form-label">Màu</label>
+						<select type="number" id="name" name="màu" class="form-control" placeholder="Chọn màu" required>
+		  <optgroup label="308205">
+			<option value="Black">Black</option>
+            <option value="Pink">Pink</option>
+            <option value="Green">Green</option>      
+           <optgroup label="303654">
+            <option value="Black">Black</option>
+            <option value="Pink">Pink</option>
+            <option value="Blue">Blue</option>          
+          <optgroup label="310046">
+            <option value="Black">Black</option>			
+          <optgroup label="322661">
+            <option value="Comics">Comics</option>
+			<option value="Venice Blue">Venice blue</option>
+			<option value="Green">Green</option>
+			<option value="Blue">Blue</option>
+			<option value="Black">Black</option>			
+		<optgroup label="303749">
+            <option value="Black">Black</option>	
+		<optgroup label="125848">
+            <option value="Black">Black</option>
+          </select>
+                    </div>
+					 <div class="col-lg-3 col-md-6 col-6">
+                        <label for="message" class="form-label">Lốt sản xuất</label>
+                        <input type="text" id="email" name="lot" class="form-control" placeholder="Lốt sản xuất" required>
+                    </div></div>
+					<div class="form-group mb-3">
+                        <label for="name" class="form-label">Mùa sản xuất</label>                      
+						<select type="number" id="name" name="mùa" class="form-control" placeholder="chọn mùa sản xuất" required>
+		  <option value="0">chọn mùa sản xuất</option>
+            <option value="AW 21">AW 21</option>
+            <option value="SS 22">SS 22</option>
+            <option value="AW 22">AW 22</option>             		
+          </select>
+                    </div> 
+                   <div class="row">
+					 <div class="col-lg-3 col-md-6 col-6">
+                        <label for="message" class="form-label">Công đoạn Định Vị</label>
+						
+                     <select type="number" id="name" name="công đoạn" class="form-control" placeholder="chọn mùa sản xuất" required>
+		  <option >Chi tiết kiểm tra</option>
+            <option value="Cộp thân trước trái">Thân trước trái</option>
+            <option value="Cộp thân trước phải">Thân trước phải</option>
+            <option value="Cộp thân sau trái">Thân sau trái</option>
+            <option value="Cộp thân sau phải">Thân sau phải</option>
+            <option value="Cộp thân sườn phải">Thân sườn phải</option>
+            <option value="Cộp cạp">Định vị cạp</option>			
+          </select>   
+                    </div>
+					
+					 <div class="col-lg-3 col-md-6 col-6">
+                        <label for="message" class="form-label">Nhiệt độ</label>                    
+		                  <input type="text" id="email" name="nhiệt y/c" class="form-control" placeholder="M :  TT:  ±5º" required>
+                    </div>
+					</div>
+					<div class="row">
+					 <div class="col-lg-3 col-md-6 col-6">
+                        <label for="message" class="form-label">Thời gian cài đặt</label>
+						<input type="text" id="email" name="thời gian y/c" class="form-control"  placeholder="Thời gian cài đặt" required>
+                    </div>
+					 <div class="col-lg-3 col-md-6 col-6">
+                        <label for="message" class="form-label">Thời gian ép TT</label>
+						<input type="text" id="email" name="t/g thực tế" class="form-control"  placeholder="Thời gian ép thực tế" required>
+                    </div>
+					</div>
+					<div class="row">
+					 <div class="col-lg-3 col-md-6 col-6">
+                        <label for="message" class="form-label">Lực ép y/c</label>
+                        <select type="number" id="name" name="lực ép y/c" class="form-control" placeholder="chọn lực ép" required>
+            <option value="3,5 kg f/cm² ± 0,3kg f/cm² ">3,5kg</option>
+            <option value="0,4 mpa ± 0,03 mpa">O,4 mpa</option>
+                         		
+          </select>
+                    </div>
+					 <div class="col-lg-3 col-md-6 col-6">
+                        <label for="message" class="form-label">Lực ép TT</label>
+                        <input type="text" id="email" name="lực ép t/t" class="form-control" placeholder="Nhập lực ép thực tế" required>
+                    </div>
+					</div>
+                   
+					<div class="form-group mb-3">
+					<label for="email" class="form-label">Vị trí , chiều hướng</label>                        
+                                               
+						<div class="row">
+                         <div class="col-lg-3 col-md-6 col-6">
+                           <div class="form-check ">
+                            <input class="form-check-input" type="checkbox" name="Chiều hướng" value="Định vị đúng vị trí, hướng" id="1">
+                            <label class="custom-control-label" for="customRadio4">ĐẠT</label>
+                           </div>           
+                         </div>
+                        <div class="col-lg-3 col-md-6 col-6">
+                           <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="Chiều hướng" value="Định vị sai vị trí, hướng, t/c tái chế khoanh vùng và gọi kỹ thuật truyền chỉnh thao tác" id="0">
+                            <label class="custom-control-label" for="customRadio5">Kông đạt</label>      
+                           </div>
+				        </div>
+                        </div>                    
+					<!-- Kết thúc nội dung 1 -->
+					<label for="email" class="form-label">Chủng loại</label>                        
+                                               
+						<div class="row">
+                         <div class="col-lg-3 col-md-6 col-6">
+                           <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="chủng loại" value="Đúng chủng loại" id="1">
+                            <label class="custom-control-label" for="customRadio4">ĐẠT</label>
+                           </div>           
+                         </div>
+                        <div class="col-lg-3 col-md-6 col-6">
+                           <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="chủng loại" value="Sai chủng loại khoanh vùng và tái chế" id="0">
+                            <label class="custom-control-label" for="customRadio5">Kông đạt</label>      
+                           </div>
+				        </div>
+                        </div>                    
+					<!-- Kết thúc nội dung chủng loại -->
+					<label for="email" class="form-label">Hạn sử dụng</label>                        
+                                               
+						<div class="row">
+                         <div class="col-lg-3 col-md-6 col-6">
+                           <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="hạn sd" value="Đạt" id="1">
+                            <label class="custom-control-label" for="customRadio4">ĐẠT</label>
+                           </div>           
+                         </div>
+                        <div class="col-lg-3 col-md-6 col-6">
+                           <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="hạn sd" value="Không đạt , khoanh vùng tái chế" id="0">
+                            <label class="custom-control-label" for="customRadio5">Kông đạt</label>      
+                           </div>
+				        </div>
+                        </div>                    
+					<!-- Kết thúc nội dung hạn sử dụng -->
+                        
+                    </div> 
+					 <div class="form-group mb-3">
+                        <label for="message" class="form-label">Người kiểm tra</label>
+                        <input type="text" id="email" name="người kt" class="form-control" placeholder="Nhập tên người kiểm tra" required>
+                    </div>
+                    <div>
+                        <button class="btn bg-gradient-primary btn-sm mb-0" type="submit">Cập nhật</button>
+                        <a class="btn btn-outline-primary btn-sm mb-0"  onclick="tai_lai_trang()">Reset</a>
+                    </div>
+                </form>
+				</div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer class="footer pt-3  ">
+        <div class="container-fluid">
+          <div class="row align-items-center justify-content-lg-between">
+            <div class="col-lg-6 mb-lg-0 mb-4">
+              <div class="copyright text-center text-sm text-muted text-lg-start">
+                © <script>
+                  document.write(new Date().getFullYear())
+                </script>
+                made with  by <b>Quality TNG PB1</b> for a better web.
+              </div>
+            </div>
+           
+          </div>
+        </div>
+      </footer>
+  </main>
+  
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzoK5aMzzNjBgd5CR7OWevlM5Upv9er-4cfdnq7GaVyFGyTY2YL6eQ6uIiaZ-fYk2svfQ/exec'
+        const form = document.forms['google-sheet']
+        
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => $("#form_alerts").html("<div class='alert alert-success text-white'> <b>Đã cập nhật</b></div>"))
+            .catch(error => $("#form_alerts").html("<div class='alert alert-danger alert-dismissible text-white'>Lỗi cập nhật vui lòng liên hệ Mr. Chiến.</div>"))
+        
+		})
+		
+    </script>
+	<script>
+        function tai_lai_trang(){
+            location.reload();
+        }
+    </script>
+</body>
+</html>
