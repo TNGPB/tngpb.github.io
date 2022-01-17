@@ -1,0 +1,126 @@
+<html><head>
+    <style>
+        
+    </style>
+    <script src="/scripts/snippet-javascript-console.min.js?v=1"></script><style type="text/css">.as-console-wrapper { position: fixed; bottom: 0; left: 0; right: 0; max-height: 150px; overflow-y: scroll; overflow-x: hidden; border-top: 1px solid #000; display: none; }
+.as-console { background: #e9e9e9; border: 1px solid #ccc; display: table; width: 100%; border-collapse: collapse; }
+.as-console-row { display: table-row; font-family: monospace; font-size: 13px; }
+.as-console-row:after { display: table-cell; padding: 3px 6px; color: rgba(0,0,0,.35); border: 1px solid #ccc; content: attr(data-date); vertical-align: top; }
+.as-console-row + .as-console-row > * { border: 1px solid #ccc; }
+.as-console-row-code { width: 100%; white-space: pre-wrap; padding: 3px 5px; display: table-cell; font-family: monospace; font-size: 13px; vertical-align: middle; }
+.as-console-error:before { content: 'Error: '; color: #f00; }
+.as-console-assert:before { content: 'Assertion failed: '; color: #f00; }
+.as-console-info:before { content: 'Info: '; color: #00f; }
+.as-console-warning:before { content: 'Warning: '; color: #e90 }
+@-webkit-keyframes flash { 0% { background: rgba(255,240,0,.25); } 100% { background: none; } }
+@-moz-keyframes flash { 0% { background: rgba(255,240,0,.25); } 100% { background: none; } }
+@-ms-keyframes flash { 0% { background: rgba(255,240,0,.25); } 100% { background: none; } }
+@keyframes flash { 0% { background: rgba(255,240,0,.25); } 100% { background: none; } }
+.as-console-row-code, .as-console-row:after { -webkit-animation: flash 1s; -moz-animation: flash 1s; -ms-animation: flash 1s; animation: flash 1s; }</style>
+</head>
+<body>
+    
+
+ 
+  <title>Webslesson Tutorialx</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+ 
+ 
+  <script src="script.js"></script>
+  <br><br>
+  <div class="container" style="width:600px;">
+   <h2 align="center">JSON x</h2><br><br>
+   <select name="country" id="country" class="form-control input-lg"><option value="">Select country</option><option value="1">country1</option><option value="2">country2</option></select>
+   <br>
+   <select name="state" id="state" class="form-control input-lg">
+    <option value="">Select state</option>
+   </select>
+   <br>
+   <select name="city" id="city" class="form-control input-lg">
+    <option value="">Select city</option>
+   </select>
+   <br>
+   <select name="house" id="house" class="form-control input-lg">
+    <option value="">Select house</option>
+   
+ 
+ 
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+
+load_json_data('country');
+
+function load_json_data(id, parent_id)
+{
+ var html_code = '';
+ $.getJSON('https://raw.githubusercontent.com/ahammoudi/jason_data/master/data.jason', function(data){
+
+  html_code += '<option value="">Select '+id+'</option>';
+  $.each(data, function(key, value){
+   if(id == 'country')
+   {
+    if(value.parent_id == '0')
+    {
+     html_code += '<option value="'+value.id+'">'+value.name+'</option>';
+    }
+   }
+   else
+   {
+    if(value.parent_id == parent_id)
+    {
+     html_code += '<option value="'+value.id+'">'+value.name+'</option>';
+    }
+   }
+  });
+  $('#'+id).html(html_code);
+ });
+
+}
+
+$(document).on('change', '#country', function(){
+ var country_id = $(this).val();
+ if(country_id != '')
+ {
+  load_json_data('state', country_id);
+ }
+ else
+ {
+  $('#state').html('<option value="">Select state</option>');
+  $('#city').html('<option value="">Select city</option>');
+  $('#house').html('<option value="">Select house</option>');
+ }
+});
+$(document).on('change', '#state', function(){
+ var state_id = $(this).val();
+ if(state_id != '')
+ {
+  load_json_data('city', state_id);
+ }
+ else
+ {
+  $('#city').html('<option value="">Select city</option>');
+ }
+});
+
+$(document).on('change', '#country', function(){
+ var country_id = $(this).val();
+ if(country_id == 1)
+ {
+  load_json_data('house', 7);
+ }
+ else if(country_id == 2)
+ {
+  load_json_data('house', 8);
+ }
+ else
+ {
+  $('#house').html('<option value="">Select house</option>');
+ }
+});
+});
+    </script>
+
+</select></div><div class="as-console-wrapper"><div class="as-console"></div></div></body></html>
