@@ -110,7 +110,7 @@
                    
                     <div class="form-group mb-3">
                         <label for="name" class="form-label">Ngày kiểm tra</label>
-                        <input type="date" id="name" name="Ngày" class="form-control" placeholder="Chọn ngày nhập" required>
+                        <input type="date" id="theDate" name="Ngày" class="form-control" placeholder="Chọn ngày nhập" required>
                     <hr class="horizontal dark mt-1 mb-3">	
 					<!-- Khai báo tổ 1-->
 					<div class="form-group mb-3">
@@ -2453,6 +2453,21 @@
         function tai_lai_trang(){
             location.reload();
         }
+    </script>
+	<script>
+       var date = new Date();
+
+var day = date.getDate();
+var month = date.getMonth() + 1;
+var year = date.getFullYear();
+
+if (month < 10) month = "0" + month;
+if (day < 10) day = "0" + day;
+
+var today = year + "-" + month + "-" + day;
+
+
+document.getElementById('theDate').value = today;
     </script>
 </body>
 </html>
