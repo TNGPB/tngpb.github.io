@@ -1,0 +1,52 @@
+<!-- HTML Markup (Parent) -->
+<select id="account-lev-0" class="form-control">
+    <option value="1" selected>Assets</option>
+    <option value="2">Liabilities</option>
+    <option value="3">Expenses</option>
+    <option value="4">Income</option>
+</select>
+
+<!-- HTML Markup (Child # 1) -->
+<select id="account-lev-1" class="form-control">
+    <option id="6">Bank</option>
+    <!-- other options -->
+</select>
+
+<!-- HTML Markup (Child # 2) -->
+<select id="account-lev-2" class="form-control">
+    <option id="9">Savings</option>
+    <!-- other options -->
+</select>
+
+<!-- HTML Markup (Child # 3 - LAST CHILD) -->
+<select id="account-lev-3" class="form-control">
+    <option id="12">Savings A/C 2</option>
+    <!-- other options -->
+</select>
+
+<!-- Javascript call on document ready -->
+<script>
+// Child # 1
+$('#account-lev1').depdrop({
+    depends: ['account-lev0'],
+    url: 'http:///localhost/site/child-account',
+    loadingText: 'Loading child level 1 ...'
+});
+
+// Child # 2 
+$('#account-lev2').depdrop({
+    depends: ['account-lev1'],
+    url: 'http:///localhost/site/child-account',
+    loadingText: 'Loading child level 2 ...'
+});
+
+// Child # 3 - LAST CHILD
+$('#account-lev3').depdrop({
+    depends: ['account-lev2'],
+    initialize: true,
+    initDepends: ['account-lev0'],
+    url: 'http:///localhost/site/child-account',
+    loadingText: 'Loading child level 3 ...'
+});
+</script>
+?>
