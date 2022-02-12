@@ -7,21 +7,192 @@
     <title>Nhập báo cáo định vị</title>
 	 <link id="pagestyle" href="http://tngpb.github.io/style/style.css" rel="stylesheet" />
     <style>
-    *{box-sizing: border-box;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;}
-        .classform>div{width:450px;display:block;margin-left:auto;margin-right:auto;}/*for responsive look*/
-        label{background: #00acf0;color:rgb(255, 255, 255);text-shadow:1px 1px 1px #777}
-        label,select{display:inline-block;padding:6px;border-radius:3px}
-        label{width:100px;}
-        select{width:250px;}
+   
     </style>
 </head>
 <body>
-    <div class="classform">
-        <div><label for="class">Mã hàng : </label> <select name="class" id="class"></select></div>
-        <div><label for="section">Vị trí : </label> <select name="section" id="section"></select></div>
-        <div><label for="subject">Màu </label> <select name="subject" id="subject"></select></div>
-        <div><label for="room">Cỡ: </label> <select name="room" id="room"></select></div>
-    </div><hr/>
+<div class="header"> Hi, <b>admin</b>!</br></br> Nhập báo cáo định vị</div>
+<div class="rmenu"><p>Vui lòng chọn đúng máy và các chỉ số <b>Định vị</b></p></div>
+    
+	<div class="maintxt">
+	 <div class="gmenu">
+	<div class="classform">
+		 <table class="content-table">
+  <thead>
+  </thead>
+  <tbody>
+    <tr>
+      <td> <div><label for="class"><b>Ngày kiểm tra </b>: </label>  <input type="date" id="name" name="Ngày" placeholder="Chọn ngày nhập" required></div></td>
+      <td> <div><label for="class"><b>Chọn máy kiểm tra </b>: </label><select type="text" id="name" name="Máy" class="form-control" placeholder="máy" required>
+		  <option value="0">Chọn máy cần kiểm tra</option>
+            <option value="H&H máy 27">H&H MÁY 27</option>
+            <option value="H&H máy 28">H&H MÁY 28</option>
+            <option value="SVT máy 29">STV MÁY 29</option>
+            <option value="STV máy 30">STV MÁY 30 </option>			
+          </select></div></td>
+      
+    </tr>
+	
+  </tbody>
+</table>
+        <div><label for="class"><h3>Thời gian kiểm tra :</h3> </label> <input type="text" name="room" id="room"></div></br>
+        <div><label for="class"><h3>Mã hàng :</h3>  </label> <select name="class" id="class"></select></div>
+        <div><label for="class"><h3>Vị trí :</h3>  </label> <select name="section" id="section"></select></div>
+        <div><label for="subject"><b>Màu</b> </label> <select name="subject" id="subject"></select></div>
+        <div><label for="room"><b>Cỡ </b>: </label> <select name="room" id="room"></select></div>
+		 </div>
+		<table class="content-table">
+  <thead>
+  </thead>
+  <tbody>
+    <tr>
+      <td> <div><label for="class"><b>Số PO </b>: </label>  <input type="text" id="name" name="Ngày" placeholder="nhập Số PO" required value ="Đ"></div></td>
+      <td> <div><label for="class"><b>Lot Sản xuất </b>: </label><input type="text" name="Ngày" placeholder="Nhập lot sản xuất" required></div></td> 
+    </tr>
+	 <tr>
+      <td> <div><label for="class"><b>Mùa </b>: </label>  <select type="number" id="name" name="mùa" class="form-control" placeholder="chọn mùa sản xuất" required>
+		  <option >chọn mùa sản xuất</option>
+            <option value="AW 21">AW 21</option>
+            <option value="SS 22">SS 22</option>
+            <option value="AW 22">AW 22</option>             		
+          </select></div></td>
+      <td> <div><label for="class"><b>Nhiệt độ  </b>: </label><input type="text" name="Ngày" placeholder="Nhiệt độ " value ="M :  TT:  ±5º"required></div></td> 
+    </tr>
+	<tr>
+      <td> <div><label for="class"><b>Thời gian cài đặt </b>: </label>  <input type="text" id="name" name="Ngày" placeholder="Nhập Thời gian cài đặt" required></div></td>
+      <td> <div><label for="class"><b>Thời gian ép thực tế </b>: </label><input type="text" name="Ngày" placeholder="Thời gian ép thực tế" required></div></td> 
+    </tr>
+	<tr>
+      <td> <div><label for="class"><b>Lực ép yêu cầu </b>: </label>  <select type="number" id="name" name="lực ép y/c" class="form-control" placeholder="chọn lực ép" required>
+            <option value="3,5 kg f/cm² ± 0,3kg f/cm² ">3,5kg</option>
+            <option value="0,4 mpa ± 0,03 mpa">O,4 mpa</option>
+                         		
+          </select></div></td>
+      <td> <div><label for="class"><b>Lực ép thực tế </b>: </label><input type="text" name="Ngày" placeholder="Lực thực tế" required></div></td> 
+    </tr>
+  </tbody>
+</table>
+</div>
+        <table class="content-table">
+  <thead>
+  </thead>
+  <tbody>
+    <tr>
+      <td> <div><label for="class"><b>Vị trí </b>: </label> 
+	  <p><input class="form-check-input" type="checkbox" name="hạn sd" value="Đạt" id="1">Đạt<br>
+</p></div></td>
+      <td> <div> <p><input class="form-check-input" type="checkbox" name="hạn sd" value="Không đạt , khoanh vùng tái chế" id="0">Không đạt<br>
+</p></div></td>
+    </tr>
+ <tr>
+      <td> <div><label for="class"><b>Chủng loại </b>: </label> 
+	  <p><input class="form-check-input" type="checkbox" name="hạn sd" value="Đạt" id="1">Đạt<br>
+</p></div></td>
+      <td> <div> <p><input class="form-check-input" type="checkbox" name="hạn sd" value="Không đạt , khoanh vùng tái chế" id="0">Không đạt<br>
+</p></div></td>
+    </tr>
+<tr>
+      <td> <div><label for="class"><b>Hạn sử dụng </b>: </label> 
+	  <p><input class="form-check-input" type="checkbox" name="hạn sd" value="Đạt" id="1">Đạt<br>
+</p></div></td>
+      <td> <div> <p><input class="form-check-input" type="checkbox" name="hạn sd" value="Không đạt , khoanh vùng tái chế" id="0">Không đạt<br>
+</p></div></td>
+    </tr>	
+  </tbody>
+</table>
+	
+ <div class="list2">
+	
+	<p></p><form action="../mail/index.php?act=write" method="post"><input type="submit" value="Viết"></form><p></p><p></p></div>
+	<div class="menu"><p></p><h3>Danh bạ</h3><div><img src="/images/user.png" alt="" class="icon"><a href="../mail/">Danh bạ</a>&nbsp;(0)</div>
+	<div><img src="/images/user-ok.png" alt="" class="icon"><a href="profile.php?act=friends">Friends</a>&nbsp;(0)&nbsp;<a href="profile.php?act=friends&amp;do=online">Online</a> (0)</div>
+	<div><img src="/images/user-block.png" alt="" class="icon"><a href="../mail/index.php?act=ignor">Blocked</a>&nbsp;(0)</div><p></p></div>
+	<div class="bmenu"><p></p><h3>cài đặt</h3><div><img src="/images/settings.png" alt="" class="icon"><a href="profile.php?act=settings">Cài đặt hệ thống</a></div>
+	<div><img src="/images/user-edit.png" alt="" class="icon"><a href="profile.php?act=edit">Chỉnh sửa hồ sơ</a></div>
+	<div><img src="/images/lock.png" alt="" class="icon"><a href="profile.php?act=password">Thay đổi mật khẩu</a></div>
+	<div><img src="/images/forbidden.png" alt="" class="icon"><span class="red"><a href="../panel/index.php"><b>Admin Panel</b></a></span></div><p></p></div>
+	<div class="rmenu"><p><a href="/exit.php"><img src="/images/del.png" alt="" class="icon">Thoát</a></p></div></div>
    <script src="http://tngpb.github.io/cop-nhiet/dulieu.js"></script>
+   <!-- bảng chọn -->
+   <style>
+  
+input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+input[type=text] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: -1px;
+   
+}
+input[type=date] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: -1px;
+   
+}
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+ select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: -1px;
+   
+}
+ 
+* {
+  font-family: sans-serif; /* Change your font family */
+}
+
+.content-table {
+  border-collapse: collapse;
+  margin: 10px 0;
+  font-size: 0.9em;
+  min-width: 100%;
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
+  
+}
+
+.content-table thead tr {
+  background-color: #009879;
+  color: #ffffff;
+  text-align: left;
+  font-weight: bold;
+}
+
+.content-table th,
+.content-table td {
+  padding: 2px 4px;
+  width: 50%;
+}
+
+.content-table tbody tr:last-of-type {
+  border-bottom: 0px solid #009879;
+}
+
+.content-table tbody tr.active-row {
+  font-weight: bold;
+  color: #009879;
+}
+ </style>
 </body>
 </html>

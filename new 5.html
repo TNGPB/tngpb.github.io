@@ -1,0 +1,41 @@
+<div class="row">
+					 <div class="col-lg-3 col-md-6 col-6">
+                        <label for="message" class="form-label">Số PO</label>
+                        <input type="text" id="email" name="số po" class="form-control" value="Đ - " required="">
+                    </div>
+					 <div class="col-lg-3 col-md-6 col-6">
+                        <label for="message" class="form-label">Cỡ</label>
+                       <select type="number" id="name" name="cỡ" class="form-control" placeholder="chọn mùa sản xuất" required="">
+		    <optgroup label="XS-2XL">
+			<option value="2XS">2XS</option>
+            <option value="XS">XS</option>
+            <option value="S">S</option>
+            <option value="M">M</option>
+            <option value="L">L</option>
+            <option value="XL">XL</option>
+            <option value="2XL">2XL</option>  
+            <option value="3XL">3XL</option> 
+            </optgroup><optgroup label="5-6 -> 14-15">
+            <option value="5-6">5-6</option>
+            <option value="7-8">7-8</option>
+            <option value="8-9">8-9</option>
+            <option value="10-11">10-11</option>
+            <option value="12-13">12-13</option>
+            <option value="14-15">14-15</option>  
+           		
+          </optgroup></select>
+                    </div></div>
+<style>
+.row {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(-1 * var(--bs-gutter-y));
+    margin-right: calc(-.5 * var(--bs-gutter-x));
+    margin-left: calc(-.5 * var(--bs-gutter-x));
+	.col-6 {
+    flex: 0 0 auto;
+    width: 50%;
+}
+</style>
