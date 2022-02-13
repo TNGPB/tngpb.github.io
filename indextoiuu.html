@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Trang chủ | Team Chất lượng PB1</title>
 	 <link id="pagestyle" href="http://tngpb.github.io/style/style.css" rel="stylesheet" />
-	 <script src="https://use.fontawesome.com/6e3eaa4b30.js"></script>
+	 <link rel="stylesheet" href="css/font-awesome.min.css">
     <style>
    
     </style>
@@ -14,7 +14,12 @@
 <body>
 <div class="header"> Hi, <b>admin</b>!</br></br> Nhập báo cáo định vị</div>
 <div class="rmenu"><p>Vui lòng chọn đúng máy và các chỉ số <b>Định vị</b></p></div>
-    
+  <div class="user"><p></p>
+<table cellpadding="0" cellspacing="0">
+<tbody>
+<tr><td><img src="/images/empty.png" width="32" height="32" alt="">&nbsp;</td>
+<td><img src="/images/m.png" alt="" class="icon-inline"><b>admin</b> (SV!)<span class="green"> [ON]</span> <b>ID:1</b></td></tr></tbody></table>
+<p></p></div>  
 	<div class="maintxt">
 	 
         <table class="content-table">
@@ -30,23 +35,12 @@
  <tr>
     <td><div class="bo"><i class="fa fa-thermometer-full fa-5x " aria-hidden="true"></i></br></br><b>Cộp Nhiệt</b></div></td>
     <td ><div class="bo"><i class="fa fa fa-window-minimize fa-5x " aria-hidden="true"></i></br></br><b>Thông số</b></div></td>
-    <td ><div class="bo">1977</div></td>
+    <td ><div class="bo"><i class=" fa-5x " aria-hidden="true">5S</i></br>1977</div></td>
    
   </tr>
   </tbody>
 </table>
-	
- <div class="list2">
-	
-	<p></p><form action="../mail/index.php?act=write" method="post"><input type="submit" value="Viết"></form><p></p><p></p></div>
-	<div class="menu"><p></p><h3>Danh bạ</h3><div><img src="/images/user.png" alt="" class="icon"><a href="../mail/">Danh bạ</a>&nbsp;(0)</div>
-	<div><img src="/images/user-ok.png" alt="" class="icon"><a href="profile.php?act=friends">Friends</a>&nbsp;(0)&nbsp;<a href="profile.php?act=friends&amp;do=online">Online</a> (0)</div>
-	<div><img src="/images/user-block.png" alt="" class="icon"><a href="../mail/index.php?act=ignor">Blocked</a>&nbsp;(0)</div><p></p></div>
-	<div class="bmenu"><p></p><h3>cài đặt</h3><div><img src="/images/settings.png" alt="" class="icon"><a href="profile.php?act=settings">Cài đặt hệ thống</a></div>
-	<div><img src="/images/user-edit.png" alt="" class="icon"><a href="profile.php?act=edit">Chỉnh sửa hồ sơ</a></div>
-	<div><img src="/images/lock.png" alt="" class="icon"><a href="profile.php?act=password">Thay đổi mật khẩu</a></div>
-	<div><img src="/images/forbidden.png" alt="" class="icon"><span class="red"><a href="../panel/index.php"><b>Admin Panel</b></a></span></div><p></p></div>
-	<div class="rmenu"><p><a href="/exit.php"><img src="/images/del.png" alt="" class="icon">Thoát</a></p></div></div>
+	</div>
    <script src="http://tngpb.github.io/cop-nhiet/dulieu.js"></script>
    <!-- bảng chọn -->
    <style>
@@ -104,7 +98,7 @@ input[type=submit]:hover {
   min-width: 100%;
   border-radius: 5px 5px 0 0;
   overflow: hidden;
-  
+  color: #0065bd;
 }
 
 .content-table thead tr {
