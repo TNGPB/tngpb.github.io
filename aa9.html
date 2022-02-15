@@ -1,0 +1,78 @@
+<div class="container my-5">
+
+  <div class="row">
+
+    <div class="col-md-7 mb-4 mb-md-0">
+
+      <div class="text-center mb-4">
+        <a class="btn btn-primary mb-4" target="_blank" href="https://docs.google.com/spreadsheets/d/1MjMoMbuRJqnrfhxjetvdny-dnsFfmLJX24OWiSFUYvk" role="button"
+           >Click to see the source sheet</a
+          >
+
+        <p>The data in the table below was imported from Google Spreadsheet. Thanks to this, they can be edited by editing this sheet, and the changes will be reflected in the html table.</p>
+
+      </div>
+
+      <!-- Table -->
+      <table class="table table-striped mb-0">
+        <thead id="table-head"></thead>
+        <tbody id="table-body"></tbody>
+      </table>
+
+    </div>
+
+  </div>
+
+  <hr class="mt-5">
+
+  <p>Built with <a target="_blank" href="https://mdbootstrap.com/">Material Design for Bootstrap</a> - free and powerful Bootstrap UI KIT</p>
+
+  <a class="btn btn-danger me-2" href="https://mdbootstrap.com/" target="_blank" role="button">Download MDB UI KIT</a>
+  <a class="btn btn-success me-2" target="_blank" href="https://mdbootstrap.com/docs/standard/getting-started/" role="button">Tutorials</a>
+  <a class="btn btn-dark mr-2" target="_blank" href="https://github.com/mdbootstrap/mdb-ui-kit" role="button">GitHub <i class="fab fa-github ml-2"></i></a>
+
+
+</div>
+<script>
+{
+      {
+        // Your API KEY
+        const API_KEY = "AIzaSyA2t3evClUKvKsgbXOBrAaqfLuIHjiJC3k";
+
+        function displayResult2(response) {
+          let tableHead = "";
+          let tableBody = "";
+
+          response.result.values.forEach((row, index) => {
+            if (index === 0) {
+              tableHead += "<tr>";
+              row.forEach((val) => (tableHead += "<th>" + val + "</th>"));
+              tableHead += "</tr>";
+            } else {
+              tableBody += "<tr>";
+              row.forEach((val) => (tableBody += "<td>" + val + "</td>"));
+              tableBody += "</tr>";
+            }
+          });
+
+          document.getElementById("table-head").innerHTML = tableHead;
+          document.getElementById("table-body").innerHTML = tableBody;
+        }
+
+        function loadData() {
+          // Spreadsheet ID
+          const spreadsheetId = "1MjMoMbuRJqnrfhxjetvdny-dnsFfmLJX24OWiSFUYvk";
+          const range = "A:Z";
+          getPublicValues({ spreadsheetId, range }, displayResult2);
+        }
+
+        window.addEventListener("load", (e) => {
+          initOAuthClient({ apiKey: API_KEY });
+        });
+
+        document.addEventListener("gapi-loaded", (e) => {
+          loadData();
+        });
+      }
+    }
+</script>
